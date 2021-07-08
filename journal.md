@@ -12,3 +12,6 @@ Added to package.json scripts:
     "start": "node server.js",
     "server": "nodemon server.js",
 ```
+
+Created a git repo for this project \
+created a server.js file

@@ -1,10 +1,11 @@
 const { Router } = require("express");
 const express = require("express");
 const { connect } = require("mongoose");
-// const connectDB = require("./config/db");
+const connectDB = require("./config/db");
 const path = require("path");
 
 const app = express();
+connectDB();
 
 app.get("/", (req, res) => res.json({ msg: "Welcome to api" }));
 app.use("/api/techs", require("./routes/techs"));

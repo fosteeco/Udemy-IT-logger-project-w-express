@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const techSchema = mongoose.Schema({
+const TechSchema = mongoose.Schema({
   firstName: {
     type: String,
     required: true,
@@ -10,4 +10,4 @@ const techSchema = mongoose.Schema({
     required: true,
   },
 });
-module.exports = mongoose.model("tech", techSchema);
+module.exports = mongoose.model("tech", TechSchema);

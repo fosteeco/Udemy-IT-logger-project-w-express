@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 // attention
 // tech
 // date
-const logSechema = mongoose.Schema({
+const LogSchema = mongoose.Schema({
   message: {
     type: String,
     required: true,
@@ -24,4 +24,4 @@ const logSechema = mongoose.Schema({
     default: Date.now,
   },
 });
-module.exports = mongoose.model("log", logSchema);
+module.exports = mongoose.model("log", LogSchema);

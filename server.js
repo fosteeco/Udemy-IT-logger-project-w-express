@@ -7,6 +7,8 @@ const path = require("path");
 const app = express();
 
 app.get("/", (req, res) => res.json({ msg: "Welcome to api" }));
+app.use("/api/techs", require("./routes/techs"));
+app.use("/api/logs", require("./routes/logs"));
 
 const PORT = process.env.PORT || 5000;
 

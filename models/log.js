@@ -23,4 +23,4 @@ const LogSchema = mongoose.Schema({
     default: Date.now,
   },
 });
-module.exports = mongoose.model("log", LogSchema);
+module.exports = mongoose.model("log", LogSchema, "logs");

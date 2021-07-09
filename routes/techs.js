@@ -51,4 +51,24 @@ router.post("/", [], async (req, res) => {
   }
 });
 
+// @route       DELETE api/techs/:username
+// @desc        delete a tech
+// @access      Public
+router.delete("/:username", [], async (req, res) => {
+  try {
+    let tech = await Tech.find({
+      userName: req.params.username,
+    });
+    if (tech.length === 0) {
+      return res.status(404).json({ msg: "Tech not found" });
+    }
+    await Tech.findByIdAndRemove(tech[0]._id);
+
+    res.json({ msg: "Tech removed " });
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send("Server Error");
+  }
+});
+
 module.exports = router;

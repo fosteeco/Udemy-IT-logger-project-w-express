@@ -10,4 +10,4 @@ const TechSchema = mongoose.Schema({
     required: true,
   },
 });
-module.exports = mongoose.model("tech", TechSchema);
+module.exports = mongoose.model("tech", TechSchema, "techs");

@@ -10,12 +10,19 @@ const Tech = require("../models/Tech");
 // @route       POST api/techs
 // @desc        Add a new tech
 // @access      Public
-router.post("/", async (req, res) => {
+router.post("/", [], async (req, res) => {
   const { firstName, lastName } = req.body;
-  tech = new Tech({
+  res.send(req.body);
+  let tech = new Tech({
     firstName,
     lastName,
   });
+
+  try {
+    await tech.save();
+  } catch (error) {
+    console.error(error.message);
+  }
 });
 
 module.exports = router;

@@ -13,8 +13,7 @@ const Tech = require("../models/Tech");
 router.get("/", [], async (req, res) => {
   try {
     let allTechs = await Tech.find({});
-    console.log(allTechs);
-    res.send(allTechs);
+    res.json(allTechs);
   } catch (err) {
     console.error(err.message);
     res.status(500).send("Server Error");

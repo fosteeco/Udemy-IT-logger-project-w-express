@@ -20,3 +20,10 @@ Forgot to install config
 ```
 npm i config
 ```
+
+Added scripts to run react and express concurrently
+
+```
+    "react-it-logger-app": "npm start --prefix react-it-logger-app",
+    "dev": "concurrently \"npm run server\" \"npm run react-it-logger-app \" "
+```

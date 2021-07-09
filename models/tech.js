@@ -9,5 +9,10 @@ const TechSchema = mongoose.Schema({
     type: String,
     required: true,
   },
+  userName: {
+    type: String,
+    unique: true,
+    required: true,
+  },
 });
 module.exports = mongoose.model("tech", TechSchema, "techs");

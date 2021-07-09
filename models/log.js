@@ -12,7 +12,6 @@ const LogSchema = mongoose.Schema({
   attention: {
     type: Boolean,
     required: true,
-    unique: true,
   },
   tech: {
     type: mongoose.Schema.Types.ObjectId,
